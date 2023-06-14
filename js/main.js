@@ -1,24 +1,33 @@
-// class가 search인 요소를 찾음
-const searchEl = document.querySelector(".search");
-const searchInputEl = searchEl.querySelector("input");
 
-searchEl.addEventListener("click", function () {
-  //logic..
-  searchInputEl.focus();
-});
+/**
+ * 검색창 제어
+ */
+// 검색창 요소(.search) 찾기.
+const searchEl = document.querySelector('.search')
+const searchInputEl = searchEl.querySelector('input')
+// 검색창 요소를 클릭하면 실행.
+searchEl.addEventListener('click', function () {
+  searchInputEl.focus()
+})
 
+// 검색창 요소 내부 실제 input 요소에 포커스되면 실행.
 searchInputEl.addEventListener("focus", function () {
   searchEl.classList.add("focused");
   //html의 속성을 지정할때 쓰는 메소드 (속성이름 , 속성에 들어갈 데이터)
   searchInputEl.setAttribute("placeholder", "통합검색");
 });
-
+// 검색창 요소 내부 실제 input 요소에서 포커스가 해제(블러)되면 실행.
 searchInputEl.addEventListener("blur", function () {
   searchEl.classList.remove("focused");
   //html의 속성을 지정할때 쓰는 메소드 (속성이름 , 속성에 들어갈 데이터)
   searchInputEl.setAttribute("placeholder", "");
 });
 
+
+/**
+ * 페이지 스크롤에 따른 요소 제어
+ */
+// 페이지 스크롤에 영향을 받는 요소들을 검색!
 const badgeEl = document.querySelector("header .badges");
 const toTopEl = document.querySelector('#to-top');
 
@@ -71,6 +80,10 @@ fadeEls.forEach(function (fadeEl, index) {
   });
 });
 
+
+/**
+ * 슬라이드 요소 관리
+ */
 //new:생성자
 //new Swiper(선택자, 옵션)
 new Swiper(".notice-line .swiper-container", {
@@ -110,6 +123,10 @@ new Swiper(".awards .swiper-container", {
   }
 });
 
+
+/**
+ * Promotion 슬라이드 토글 기능
+ */
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
 
@@ -127,6 +144,9 @@ promotionToggleBtn.addEventListener("click", function () {
 });
 
 
+/**
+ * 부유하는 요소 관리
+ */
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 문자 데이터를,
