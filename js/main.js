@@ -1,8 +1,7 @@
-
 /**
  * 검색창 제어
  */
-// 검색창 요소(.search) 찾기.
+// 검색창 요소(.search) 찾기
 const searchEl = document.querySelector('.search')
 const searchInputEl = searchEl.querySelector('input')
 // 검색창 요소를 클릭하면 실행.
