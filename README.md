@@ -1,7 +1,7 @@
 # ☕STARBUCKS
 
 스타벅스 랜딩 페이지(홈페이지)를 만들기  
-[Starbucks 페이지 + 로그인](https://velvety-taiyaki-14dc00.netlify.app/)
+[Starbucks 페이지/로그인](https://velvety-taiyaki-14dc00.netlify.app/)
 
 
 ## 문자 인코딩(Character Encoding) 설정
